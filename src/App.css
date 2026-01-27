@@ -1,0 +1,165 @@
+/* index.css - Fixed Horizontal Catalog - Full Width - No Extra Right Space */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@400;500;600;700&display=swap');
+
+body {
+  font-family: 'Inter', system-ui, sans-serif;
+  background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+  color: #e0e0e0;
+  min-height: 100vh;
+  background-attachment: fixed;
+}
+
+/* Full-width Header - No gaps */
+.header {
+  width: 100%;
+  text-align: center;
+  padding: 2.5rem 1rem 1.8rem;
+  background: rgba(0, 0, 0, 0.55);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.header h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(2.2rem, 5vw, 3.5rem);
+  color: #ffffff;
+  letter-spacing: 1.5px;
+  margin-bottom: 0.6rem;
+  text-shadow: 0 3px 15px rgba(0,0,0,0.7);
+}
+
+.subtitle {
+  font-size: clamp(1rem, 3vw, 1.25rem);
+  color: #c0c0ff;
+  font-weight: 500;
+}
+
+/* Horizontal Scroll - Fixed right gap + full bleed */
+.movie-grid {
+  display: flex;
+  overflow-x: auto;
+  gap: 2rem;
+  padding: 2.5rem 5% 3rem;           /* symmetric padding */
+  scroll-snap-type: x mandatory;
+  scrollbar-width: thin;              /* modern thin scrollbar */
+  -webkit-overflow-scrolling: touch;  /* smooth iOS scroll */
+}
+
+/* Hide default scrollbar but keep functionality */
+.movie-grid::-webkit-scrollbar {
+  height: 8px;
+}
+.movie-grid::-webkit-scrollbar-thumb {
+  background: rgba(138, 43, 226, 0.5);
+  border-radius: 4px;
+}
+.movie-grid::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+/* Important: prevent right-side phantom space */
+.movie-grid::after {
+  content: "";
+  flex: 0 0 5%;                       /* mirrors left padding → balanced feel */
+  min-width: 1px;
+}
+
+/* Card - Simplified (no button) */
+.movie-card {
+  flex: 0 0 320px;                    /* fixed width for consistency */
+  width: 320px;
+  background: rgba(255, 255, 255, 0.07);
+  border-radius: 16px;
+  overflow: hidden;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.45);
+  transition: all 0.35s ease;
+  scroll-snap-align: start;
+}
+
+.movie-card:hover {
+  transform: translateY(-12px);
+  box-shadow: 0 25px 55px rgba(138, 43, 226, 0.35);
+  border-color: rgba(138, 43, 226, 0.6);
+}
+
+.card-image-wrapper {
+  position: relative;
+  height: 420px;                      /* taller posters look premium */
+  overflow: hidden;
+}
+
+.movie-poster {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.movie-card:hover .movie-poster {
+  transform: scale(1.08);
+}
+
+.image-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0,0,0,0.85) 0%, transparent 45%);
+}
+
+.card-content {
+  padding: 1.4rem 1.2rem;
+  text-align: center;
+}
+
+.movie-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.55rem;
+  color: #ffffff;
+  margin-bottom: 1.1rem;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.info-row {
+  display: flex;
+  justify-content: space-between;
+  margin: 0.7rem 0;
+  font-size: 1.05rem;
+}
+
+.label {
+  color: #b0b0ff;
+  font-weight: 500;
+}
+
+.value {
+  color: #ffffff;
+  font-weight: 600;
+}
+
+.price {
+  color: #ff7582;
+  font-weight: 700;
+  font-size: 1.25rem;
+}
+
+/* Full-width Footer */
+.footer {
+  width: 100%;
+  text-align: center;
+  padding: 2rem 1rem;
+  background: rgba(0, 0, 0, 0.6);
+  color: #a0a0ff;
+  font-size: 1.05rem;
+  letter-spacing: 0.8px;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  margin-top: 2rem;
+}
