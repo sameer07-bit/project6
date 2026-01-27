@@ -29,8 +29,6 @@ class MovieCard extends Component {
             <span className="value price">{data.price}</span>
           </div>
         </div>
-
-        <button className="watch-btn">Watch Now ▶</button>
       </div>
     );
   }
