@@ -6,10 +6,10 @@ export default class App extends Component {
     super();
     this.state = {
       courses: [
-        { name: "Pokémon Adventure", duration: "2hrs", price: "Rs 100", img: "1.jpg" },
-        { name: "Doraemon Magic",     duration: "2hrs", price: "Rs 100", img: "2.jpg" },
+        { name: "Pokémon", duration: "2hrs", price: "Rs 100", img: "1.jpg" },
+        { name: "Doraemon",     duration: "2hrs", price: "Rs 100", img: "2.jpg" },
         { name: "Toy Story 3",        duration: "2hrs", price: "Rs 100", img: "3.jpg" },
-        { name: "Cars 3 – Speed!",    duration: "2hrs", price: "Rs 100", img: "4.jpeg" },
+        { name: "Car's 3 ",    duration: "2hrs", price: "Rs 100", img: "4.jpeg" },
       ]
     };
   }
@@ -20,8 +20,8 @@ export default class App extends Component {
     return (
       <div className="app-wrapper">
         <header className="header">
-          <h1>Animated Movies Catalog 🎬✨</h1>
-          <p className="subtitle">SHAIK SAMEER AHMED's Fun Collection!</p>
+          <h1>Animated Movies Catalog </h1>
+          <p className="subtitle">2500080004</p>
         </header>
 
         <main className="movie-grid">
