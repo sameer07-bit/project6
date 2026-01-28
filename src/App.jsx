@@ -13,7 +13,7 @@ export default class App extends Component {
          { name: "Frozen", duration: "2hrs", price: "Rs 120", img: "5.jpg" },
     { name: "Kung Fu Panda", duration: "1hr 45min", price: "Rs 110", img: "6.jpg" },
     { name: "Minions", duration: "1hr 50min", price: "Rs 105", img: "7.jpg" },
-    { name: "Baby Boss", duration: "1hr 37min", price: "Rs 115", img: "8.jpg" },
+    { name: "Boss Baby", duration: "1hr 37min", price: "Rs 115", img: "8.jpg" },
     { name: "Incredibles", duration: "1hr 55min", price: "Rs 130", img: "9.jpeg" },
     { name: "Moana", duration: "1hr 47min", price: "Rs 125", img: "10.jpeg" },
     { name: "Beyblade", duration: "1hr 30min", price: "Rs 100", img: "11.jpg" },
